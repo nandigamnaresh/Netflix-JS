@@ -1,0 +1,149 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    /* background-color: #a6cfe0; */
+    /* color: #fad744; */
+    color: white;
+    font-size: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    background-image: url("https://images.cinemaexpress.com/uploads/user/imagelibrary/2021/2/10/original/143249121_705820133449424_7741355930662727479_o.jpg");
+
+    
+  
+  }
+  .score {
+    background-color: blue;
+    padding: 40px 40px 50px 40px;
+    margin-left: 30px;
+    border-radius: 4px;
+    color: white;
+    position: sticky;
+    top: 17.5%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .marks {
+    display: flex;
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  .main {
+    width: 55%;
+    margin: 50px auto;
+    display: flex;
+    gap: 08px;
+    justify-content: center;
+  }
+  .quiz_main {
+    width: 100%;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bolder;
+    font-size: 52px;
+    color: white;
+    
+
+
+  }
+  .questions {
+    background-color: blue;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 4px;
+  }
+  
+  .questions_child {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px 20px 10px;
+  }
+  
+  .answers {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid #fad744;
+    padding-bottom: 30px;
+  }
+  label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .question {
+    font-weight: bolder;
+    color: black;
+  }
+  button {
+    padding: 20px 20px;
+    background-color: orangered;
+    color: white;
+    border-radius: 4px;
+    border-color: white;
+    outline: none;
+    font-size: large;
+    border-radius: 10px;
+    width: max-content;
+    cursor: pointer;
+    margin: auto;
+    font-family: "Source Sans Pro", sans-serif;
+    margin-bottom: 30px;
+  }
+  button:hover{
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .main {
+      width: 90%;
+    }
+    .quiz_main {
+      margin-left: 0px;
+    }
+    .score {
+      padding: 5px 10px;
+      gap: 15px;
+      width: 100px;
+      height: 80px;
+      position: absolute;
+      right: 6%;
+      top: 12%;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .main {
+      width: 90%;
+    }
+    .quiz_main {
+      margin-left: 0px;
+    }
+    .score {
+      padding: 5px 10px;
+      gap: 15px;
+      width: 100px;
+      height: 80px;
+      position: absolute;
+      right: 6%;
+      top: 12%;
+    }
+  }

@@ -1,0 +1,33 @@
+#header a{
+    /* background-color: #1c304b; */
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+#a{
+    background-color:#1c304b;
+}
+#header a:hover{
+    background: #3A3B3C;
+    padding: 8px 12px 8px 12px;
+
+}
+
+
+.drop-menu{
+background: #242526;
+    width: 180px;
+    top: 85px;
+    line-height: 45px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.drop-menu:hover{
+
+top: 65px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s ease;
+}

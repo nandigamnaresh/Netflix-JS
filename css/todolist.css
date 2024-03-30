@@ -1,0 +1,36 @@
+.header{
+    text-align: center;
+    background-color: aqua;
+}
+.section h3{
+    margin-left: 130px;
+    color: darkorange;
+}
+.section{
+    margin: 50px 0px 0px 850px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.mylists li{
+    padding-bottom: 30px;
+}
+.name{
+    padding-right: 150px;
+    color: blue;
+}
+.delete{
+    color: rgb(228, 57, 57);
+    background-color: beige;
+
+}
+#addform{
+    text-align: center;
+    margin-top: 50px;
+}
+#searchform{
+    padding-bottom: 20px;
+}
+#btn{
+    background-color: rgb(127, 168, 127);
+    color: white;
+}

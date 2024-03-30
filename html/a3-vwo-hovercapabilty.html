@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" >
+  <style>
+    /* Style for the dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style for the dropdown button (headings) */
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: #333;
+      background-color: inherit;
+      cursor: pointer;
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Style for each item in the dropdown content */
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color on mouse hover */
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    /* Show the dropdown content when mouse over the dropdown button */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    #contentDisplay{
+     
+        margin-left: 200px;
+        margin-top: -125px;
+        background-color: rgb(223, 135, 208);
+        height: 300px;
+        padding: 10px;
+
+    }
+    .dropdown-content{
+        min-width: 1000px;
+        width: 100%;
+        
+    }
+
+
+
+    #hoverElement 
+    {
+      display: none;
+      position: absolute;
+      background-color: #f0f0f0;
+      padding: 10px;
+      margin-left: 200px;
+      margin-top: -321px;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="dropbtn">capabilites</button>
+  <div class="dropdown-content">
+    <a href="#" onmouseover="displayContent1()">Testing</a>
+    <a href="#" onmouseover="displayContent('Content for Heading 2 ')">Behavior analysis</a>
+    <a href="#" onmouseover="displayContent('Content for Heading 3')">personalization</a>
+    <div id="contentDisplay"></div>
+
+    <div id="hoverElement">
+      <ul>
+          <li>hi</li>
+          <li>hello</li>
+          <li>unnava</li>
+      </ul>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<script>
+  function displayContent(data) {
+    // Display content in the specified area
+    document.getElementById('contentDisplay').innerHTML = data;
+  }
+
+
+
+  function  displayContent1(){
+  
+    var element = document.getElementById("hoverElement");
+    element.style.display = "block";
+
+  }
+
+  
+
+
+
+
+  
+</script>
+
+</body>
+</html>

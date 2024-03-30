@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouseover Example</title>
+  <style>
+    #hoverElement {
+      display: none;
+      position: absolute;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="hoverElement">
+    <ul>
+        <li>hi</li>
+        <li>hello</li>
+        <li>unnava</li>
+    </ul>
+</div>
+
+<p onmouseover="displayContent()">Hover over me to display content</p>
+
+<script>
+  function displayContent() {
+    var element = document.getElementById("hoverElement");
+    element.style.display = "block";
+  }
+</script>
+
+</body>
+</html>

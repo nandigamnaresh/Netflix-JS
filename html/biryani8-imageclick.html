@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
+  <link rel="stylesheet" href="/css/biryani1-imageclick.css" />
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .product_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    display: flex;
+    /* flex-wrap: wrap; */
+  }
+  .img_full {
+    width: 50%;
+  }
+  .main_img {
+    width: 100%;
+    margin-top: 50px;
+  }
+  
+  .product_desc {
+    width: 60%;
+    margin-top: 40px;
+    padding-left: 30px;
+  }
+  .title {
+    font-weight: 300;
+    font-size:30px;
+    letter-spacing: -2px;
+  }
+  .subtitle {
+    margin-top: 20px;
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+    font-weight: 400;
+  }
+  .price {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: rgb(27, 25, 25);
+  }
+  .price strong {
+    color: #009688;
+    font-weight: bold;
+  }
+  
+  .description {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #86939e;
+  }
+  .product_preview {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 20px;
+  }
+  .small_img {
+    margin: 5px;
+    width: 15%;
+    height: 30%;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 6px;
+  }
+  .active {
+    border: 2px solid #009688;
+  }
+  .add_to_cart {
+    margin-top: 90px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #fff;
+    padding: 20px 30px;
+    letter-spacing: 2px;
+    background-color: #009688;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 50%);
+  }
+
+  .add_to_cart:hover{
+    background-color: red;
+    padding: 22px 32px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .product_container {
+      flex-direction: column;
+    }
+    .img_full {
+      width: 100%;
+    }
+    .product_desc {
+      width: 100%;
+    }
+    .title {
+      font-size: 34px;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+
+  
+  <section class="product_container">
+  </section>
+
+
+  <script>
+    var productData = [
+    {
+      id: "8",
+      name: "LEAF BURGER",
+      preview:
+        "https://b.zmtcdn.com/data/pictures/chains/1/18869781/0e129a4b8d8f5b450aef96517bd85f2a.jpg",
+      photos: [
+        "https://b.zmtcdn.com/data/pictures/chains/1/18869781/d924905c4cb0fe4befe3cbe8f9a81e04.jpg",
+        "https://b.zmtcdn.com/data/pictures/chains/1/18869781/a34b050a39c817d61505674f7ae9c163.jpg",
+        "https://b.zmtcdn.com/data/pictures/chains/1/18869781/f8999da6ffef17aab4cfc4442d7b4439.jpg",
+        "https://b.zmtcdn.com/data/pictures/chains/1/18869781/912c75944ad7ba0f73b284fc104880b4.jpg",
+        "https://b.zmtcdn.com/data/reviews_photos/ade/d8e7d2ef74527143975fe3750554bade_1629102840.jpg"
+      ],
+      description:
+        "Bank balance chudu mundu tharwatha order chey",
+    
+        quality: "perfect taste and shapes ",
+      price: 550
+    }
+  ];
+  
+  var dynamicProduct = document.querySelector(".product_container");
+  
+  productData.map((item) => {
+    dynamicProduct.innerHTML += `
+      <div class="img_full">
+      <img class ="main_img" src=${item.preview} alt="">
+    </div>
+    <div class="product_desc">
+      <h2 class="title">${item.name}</h2>
+      <h3 class="subtitle">${item.quality}</h3>
+      <h3 class="price">Price Rs : <strong>${item.price}</strong></h3>
+      <h4 class="subtitle">Description</h4>
+      <p class="description">
+       ${item.description}
+      </p>
+      <h4 class="subtitle">Product Preview</h4>
+      <div class="product_preview">
+         <img  class="small_img active"  src="${item.photos[0]}" alt="">
+         <img  class="small_img" src="${item.photos[1]}" alt="">
+         <img class="small_img" src="${item.photos[2]}" alt="">
+         <img class="small_img" src="${item.photos[3]}" alt="">
+         <img class="small_img" src="${item.photos[4]}" alt="">
+      </div>
+      <button class="add_to_cart" onclick="biryani8()">ORDER</button>
+    </div>
+    `;
+  });
+  function biryani8(){
+    document.location.href="biryani8-order.html";
+  }
+  
+  
+  var smallImg = document.querySelectorAll(".small_img");
+  
+  smallImg.forEach((small) =>
+    small.addEventListener("click", function (e) {
+      var fullImg = document.querySelector(".main_img");
+      var newImg = document.querySelectorAll(".small_img");
+      fullImg.src = e.target.src;
+      for (var i = 0; i < newImg.length; i++) {
+        newImg[i].classList.remove("active");
+      }
+      e.target.classList.add("active");
+    })
+  );
+  </script>
+
+</body>
+
+</html> 

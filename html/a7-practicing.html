@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="aaa"></h1>
+    <script>
+
+        
+
+
+
+        //normal function
+
+        // function naresh()
+        // {
+        //     var a=10;
+        //     var b=40
+        //     console.log(a*b)
+        // }
+        // naresh() 
+
+
+
+
+
+
+
+
+
+
+        //foreach
+
+        // var naresh1="nandigam naresh venkatesh phani akash praveen satya rajesh hi hn hrgfdsawergth";
+        // var dataentry= naresh1.split(" ");
+        // var hello = []
+        // console.log(hello)
+
+        // dataentry.forEach(data=>
+        // {
+        //     if(data.length<5)
+        //     {
+        //         hello.push(data)
+        //     }
+        // });
+        // console.log(hello)
+
+
+
+
+        
+
+
+
+        
+
+
+        //arrow function   
+
+        // var naresh =(num)=>num*4;
+        // console.log(naresh(10))
+
+
+
+
+
+
+        //ifelse
+
+        // var a=15;
+        // if(a==10)
+        // {
+        //     console.log("not matched")
+        // }
+        // else if(a==15)
+        // {
+        //     console.log("is matched")
+        // }
+        // else
+        // {
+        //     console.log("no matched")
+        // }
+
+
+
+
+
+
+
+
+
+        //map function
+
+        var array=[
+            {
+                id:1,
+                name:"naresh",
+                age:21,
+                place:"guntur"
+            },
+            {
+                id:2,
+                name:"venkatesh",
+                age:20,
+                place:"amaravathi"
+            },
+            {
+                id:3,
+                name:"rajesh",
+                age:23,
+                place:"kastala"
+            },
+            {
+                id:4,
+                name:"phani",
+                age:24,
+                place:"vijayawada"
+            },
+            {
+                id:5,
+                name:"akash",
+                age:25,
+                place:"hyderabad"
+            },
+
+        ]
+
+        var a = array.map((value)=>`<li> ${value.place} </li>`)
+        console.log(a)
+        a.join()
+        document.getElementById('aaa').innerHTML=a;
+    
+
+
+
+
+    </script>
+</body>
+</html>

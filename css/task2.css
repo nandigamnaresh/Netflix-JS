@@ -1,0 +1,33 @@
+img {
+    height: 400px;
+    width: 90%;
+
+}
+.oyo1{
+    margin-left: 50px;
+    font-size: 25px;
+}
+
+.names{
+    color: red;
+    font-weight: bolder;
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+}
+.names:hover{
+    color: white;
+    background-color:blue;
+}
+.where
+{
+    color: green;
+}
+
+.parent-list
+ {
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin: 20px;
+}

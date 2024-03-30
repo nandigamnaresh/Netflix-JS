@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <!-- <link rel="stylesheet" href="/css/responsive.css"> -->
+  <style>
+    /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+
+}
+
+nav ul li:hover {
+    background-color: rgb(151, 138, 138);
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.banner {
+    background-color: #f0f0f0;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 150px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    box-shadow: 0px 0px 20px 0px blue;
+}
+
+.card:hover {
+    background-color: gold;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* styles.css - Media Queries */
+
+@media (max-width: 768px) 
+{
+    header 
+    {
+        padding: 10px;
+    }
+
+    nav ul li 
+    {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .cards 
+    {
+        padding: 0 10px;
+    }
+
+    .card 
+    {
+        width: calc(50% - 40px);
+    }
+}
+
+
+
+@media (max-width: 480px) 
+{
+    .card {
+        width: calc(100% - 40px);
+    }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Welcome to our website</h1>
+    <img src="https://goldandhra.com/wp-content/uploads/2023/12/Prabhas-Salaar-Movie-Review.jpg" alt="" width="100%">
+  </section>
+
+  <section class="cards">
+    <div class="card">
+        <img src="https://e1.pxfuel.com/desktop-wallpaper/596/360/desktop-wallpaper-prabhas-latest-iphone-prabhas.jpg" alt="" width="300px" height="300px">
+      <h2>Bahubali</h2>
+      <p>Die heart fans of darling prabhas.</p>
+    </div>
+    
+    <div class="card">
+        <img src="https://rukminim2.flixcart.com/image/850/1000/ky0g58w0/poster/q/k/c/small-prabhas-actor-bahubali-bollywood-prabas-prabhas-raju-sahoo-original-imagac5bd7byyt9a.jpeg?q=90&crop=false" alt="" width="300px" height="300px">
+      <h2>Mass ka babp..</h2>
+      <p>Die heart fans of darling prabhas.</p>
+    </div>
+    
+    <div class="card">
+        <img src="https://www.cinejosh.com/newsimg/newsmainimg/prabhas-doing-another-sandalwood-project_b_2606231231.jpg" alt="" width="300px" height="300px">
+      <h2>Darling</h2>
+      <p>Die heart fans of darling prabhas.</p>
+    </div>
+  </section>
+
+
+
+</body>
+<footer>
+    <p>&copy; 2024 Your Website. All rights reserved.</p>
+  </footer>
+</html>

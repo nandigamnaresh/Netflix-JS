@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VWO-LOGIN</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.min.js"></script>
+    
+    <link rel="stylesheet" href="/css/vwo-login.css">
+</head>
+<body>
+
+    <form  class="box" action="vwo-congratulation.html">
+        <h1>LOGIN</h1>
+        <input type="text" placeholder="Number" id="number" onblur="naresh()" >
+        <p id="alert"></p>
+
+        
+        <input type="password" placeholder="Password" id="pass" onkeypress="naresh1()">
+        <p id="alert1"></p>
+
+
+        <input type="submit"  placeholder="LOGIN" onclick="return login()">
+        <a onclick="creaQR()" style="cursor: pointer;">QR CODE</a>
+    </form>
+        <div id="abc" ></div>
+        
+
+
+
+
+    <script src="/js/vwo-login.js"></script>
+
+</body>
+</html>

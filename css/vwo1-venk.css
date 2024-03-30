@@ -1,0 +1,167 @@
+.dropdown {
+    position: relative;
+    /* display: inline-block; */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 1000px;
+    z-index: 1;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content li {
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    background-color: rgb(248, 243, 247);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.v3 ul {
+    margin-left: 300px;
+    margin-top: -420px;
+}
+.v4 ul {
+    margin-left: 600px;
+    margin-top: -450px;
+}
+.v2 ul li a{
+   text-decoration: none;
+   color: black;
+}
+.v3 ul li a{
+    text-decoration: none;
+    color: black;
+ }
+ .v4 ul li a{
+    text-decoration: none;
+    color: black;
+ }
+ .navbar{
+    background-color: rgb(32, 9, 54);
+ }
+
+.collapse ul li:hover{
+    background-color: rgb(162, 106, 183);
+
+}
+.navbar{
+    position: sticky;
+    top: 0px;
+    
+}
+.bgimg{
+
+    background-size: cover;
+    width: 100%;
+}
+.smc {
+    text-align: center;
+    padding: 200px;
+}
+
+/* cabaility hover */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Style for the dropdown button (headings) */
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #333;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  /* Style for the dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  /* Style for each item in the dropdown content */
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color on mouse hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  /* Show the dropdown content when mouse over the dropdown button */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  #contentDisplay{
+   
+      margin-left: 200px;
+      margin-top: -288px;
+      background-color: rgb(217, 151, 206);
+      height: 530px;
+      
+
+  }
+  .dropdown-content{
+      min-width: 1200px;
+      width: 100%;
+      
+  }
+
+
+
+  #hoverElement 
+  {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    margin-left: 200px;
+    margin-top: -530px;
+  }
+  #hoverElement1 
+  {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    margin-left: 200px;
+    margin-top: -530px;
+  }
+  .t4{
+      margin-left: 480px;
+      margin-top: -280px;
+  }
+  .t5{
+      margin-left: 650px;
+      margin-top: -150px;
+  }
+
+  .b3{
+      margin-left: 470px;
+      margin-top: -200px;
+  }
+  .b4{
+      margin-left: 690px;
+      margin-top: -200px;
+  }

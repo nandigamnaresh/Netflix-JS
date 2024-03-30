@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Data types >>>>>>>>>>>>>>
+
+
+// 1.string 
+
+// var heroName = 'Gopikrishna'
+// document.write(heroName + "<br>");
+// document.write(typeof(heroName))
+
+
+
+// 2.number 
+// var myMarks = 999;
+// document.write(myMarks + "<br>");
+// document.write(typeof (myMarks))
+
+
+
+
+// 3.Boolean 
+// var isHeGoodBoy = false;
+// // document.write(typeof isHeGoodBoy + "<br>");
+
+
+
+// if( isHeGoodBoy == true){
+//     document.write("Hes very good boy");
+// }else{
+//     document.write("hes not good boy")
+// }
+
+
+
+
+// // 4.Null 
+// var bloodGroup = null
+// document.write(bloodGroup)
+
+
+
+
+// 5.undefined 
+// var myGroup;
+// document.write(myGroup)
+
+
+
+// 6.object 
+// var employeeDetails = {
+//     name: 'Gopikrishna',
+//     age: 24,
+//     salary: 300000,
+//     isheBestEmployee: true
+// }
+// document.write(employeeDetails.name + employeeDetails.age)
+
+
+
+
+
+
+// // 7.Array 
+// var animals = ["dog","tiger","lion","cat"]
+// document.write(animals + "<br>")
+// document.write(animals[3])
+
+
+// var myStudent = ["Gopikrishna", "24", "Btech","true"]
+// document.write(myStudent[2])
+
+
+
+// A1. Push 
+
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// movies.push("Guntur Karam")
+// document.write(movies)
+
+
+
+// A3.unshift 
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// movies.unshift("Devara,3Idiots")
+// document.write(movies)
+
+
+
+// A2.pop 
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// movies.pop()
+// document.write(movies)
+
+
+
+// A4.shift 
+
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// movies.shift("")
+// movies.shift("")
+// document.write(movies)
+
+// A5.concat()
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// var myStudent = ["Gopikrishna", "24", "Btech","true"]
+// // var value = movies.concat(myStudent)
+// document.write(value)
+
+
+
+
+
+
+
+
+
+
+// slice() 
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// var title = movies.slice(2,4)
+// document.write(title)
+
+// splice 
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// movies.splice(0,3,"billa")
+// document.write(movies)
+
+
+
+// indexof()
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// var title = movies.indexOf("RRR")
+// document.write(title)
+ 
+
+
+
+
+
+// Map()
+// var values=[2,4,6,8,10]
+// var numbers = values.map((e) =>{
+//     return e*2
+// })
+// console.log(numbers)
+
+
+
+// var list=[2,4,6,8,10]
+// var num = list.forEach((e) =>{
+//     return e*2
+// })
+// console.log(num)
+
+
+
+
+// var gopi=[1,2,3,4,5,10]
+// gopi.filter((e)=>{
+//     console.log(e%2===0)
+// })
+
+
+// var gopi=[1,2,3,4,5,10]
+// var a=gopi.filter((e)=>{
+//    return e%2===0
+// })
+// console.log(a)
+
+
+
+// var list=[2,4,6,8,10]
+// var num = list.forEach((e) =>{
+//     return e*2
+// })
+// console.log(num)
+
+
+
+
+
+// Foreach ..............
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// var movies = [2,4,6,8,10]
+
+// movies.forEach((movies) =>{
+//     document.write(movies)
+// })
+
+// var movies = ["Salar","Pokiri","RRR","90s","Animal"]
+// // var movies = [2,4,6,8,10]
+
+// movies.map((movies) =>{
+//     document.write(movies)
+// })
+
+// sorting .......................
+
+// var list = [9,4,8,2,6,1,5]
+// list.sort()
+// console.log(list)
+
+
+
+
+// var list = [9,4,8,2,6,1,5]
+// var sorted = list.toSorted();
+// // list.sort()
+// document.write(sorted)
+
+// var list=["Gopi","Narendra","Vivek","Nikhil"]
+// list.sort()
+// document.write(list)
+
+
+
+
+
+// Reverse ...............
+
+var list=["Gopi","Narendra","Vivek","Nikhil"]
+list.reverse()
+document.write(list)
+
+
+
+
+
+
+
+// Function.....................
+
+// normal fun
+
+// function math(a,ab,bc,abc){
+//      var d=a*ab+bc-abc;
+//     return d;
+// }
+// document.write(math(2,4,6,4))
+// function gopikrishna(){
+//     console.log("hello world")
+// }
+// gopikrishna()
+
+
+// Arrow fun ..........................
+
+// var gopi=(x,y)=>{
+//     return x+y
+// };
+// document.write(gopi(100,22))
+
+
+
+
+
+
+// callback fun >>>>>>>>>>>>>>>>>>>>>>>>
+
+// function values(ball,bat, callback)
+// {
+//     var things=ball*bat;
+//     callback(things);
+// }
+// function xyz(things)
+// {
+//     document.write(things);
+// }
+// values(20,10,xyz)
+
+
+
+
+
+
+
+
+
+
+// Uppercase >>>>>>>>>>>>>>>>>>>>>>>>>>.
+
+// var student = "Gopikrishna"
+// bandi=student.toUpperCase()
+// document.write(bandi)
+
+// Lowercase>>>>>>>>>>>>>>>>>>>>>>>>>> 
+
+// var student = "GOPIKRISHNA"
+// bandi=student.toLowerCase()
+// document.write(bandi)
+
+// FOR LOOP >>>>>>>>>>>>>>>>>>>>>>>>> 
+
+// var list=["Gopi","Krishna","Narendra","Vicky","Bandi"]
+// // document.write(list.length)
+// for (var i=0; i<list.length;i++){
+//     document.write(list[i])
+// }
+
+
+
+
+// while loop>>>>>>>>>>>>>>
+
+// var list=["Gopi","Krishna","Narendra","Vicky","Bandi"]
+// var i=0;
+// while(i<list.length){
+//     document.write(i)
+//     i++
+// }
+
+// trim>>>>>>>>>>>>>>>> 
+// var list="      Gopi        Krishna    "
+// var bandi=list.trim()
+// document.write(bandi)
+
+// if loop >>>>>>>>>>>>>>>>>>>>>>. 
+
+// var x=199
+// if (x<100){
+//     document.write("lesser")
+// }
+// else{
+//     document.write("greater")
+// }
+
+
+
+// Operators>>>>>>>>>>>>>>>>>>>>
+
+// 1.(+=)addition (add a value to the variable and assgns result to the variable)
+
+// var a=50
+// a+=60
+// a+=50
+// document.write(a)
+
+// 2.(-=)subtraction (subtracts a value to the variable and assgns result to the variable)
+
+// var a=500
+// a-=30
+// a-=70
+// a-=256
+// document.write(a)
+
+
+// 3.(*=)multiplication (multiple a value to the variable and assgns result to the variable)
+
+// var a=50
+// a*=30
+// a*=2
+// document.write(a)
+
+// 4.(/=)division (division a value to the variable and assgns result to the variable)
+
+// var a=1000
+// a/=100
+// a+=500
+// document.write(a)
+
+// 5.(%=)module (module a value to the variable and assgns result to the variable)
+
+// var a=2000
+// a%=20
+// document.write(a)
+    </script>
+</body>
+</html>

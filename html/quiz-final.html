@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple quiz 2</title>
+    <link rel="stylesheet" href="/css/quiz-final.css">
+</head>
+
+<body>
+
+    <div class="container">
+        Q1 what is pop()?<hr>
+        <input type="radio" name="question1" >adding first element<br>
+        <input type="radio" name="question1">adding last element<br>
+        <input type="radio" name="question1">remove first element<br>
+        <input type="radio" name="question1" id="correct1">remove last element<br>
+        <button class="next" onclick="next(1) ">NEXT</button>
+    </div>
+
+    
+    <div class="container">
+        Q2 what is push()?<hr>
+        <input type="radio" name="question2" >adding first element <br>
+        <input type="radio" name="question2" id="correct2">adding last element<br>
+        <input type="radio" name="question2">remove first element<br>
+        <input type="radio" name="question2">remove last element<br>
+        <button class="prev" onclick="prev(1)">PREV</button>
+        <button class="next" onclick="next(2)">NEXT</button>
+        
+    </div>
+
+
+
+
+    <div class="container">
+        Q3 what is a local storage?<hr>
+        <input type="radio" name="question3" >accessing only d drive<br>
+        <input type="radio" name="question3">accessing only c drive<br>
+        <input type="radio" name="question3" id="correct3">accessing any window<br>
+        <input type="radio" name="question3">NONE<br>
+        <button class="prev" onclick="prev(2)">PREV</button>
+        <button class="next" onclick="next(3)">NEXT</button>
+        
+    </div>
+
+    
+
+    <div class="container">
+        Q4 which object ....this keyword?<hr>
+        <input type="radio" name="question4" >local object<br>
+        <input type="radio" name="question4">direct object<br>
+        <input type="radio" name="question4">indirect object<br>
+        <input type="radio" name="question4" id="correct4">global object<br>
+        <button class="prev" onclick="prev(3)">PREV</button>
+        <button class="next" onclick="next(4)">NEXT</button>
+    </div>
+
+
+
+    <div class="container">
+        Q5 javascript is an ___language?<hr>
+        <input type="radio" name="question5" id="correct5">Object-oriented<br>
+        <input type="radio" name="question5">Object-Based<br>
+        <input type="radio" name="question5" >Procedural<br>
+        <input type="radio" name="question5">None of the above<br>
+        <button class="prev" onclick="prev(4)">PREV</button>
+        <button class="next" onclick="next(5)">NEXT</button>
+    </div>
+
+
+    <div class="container">
+        Q6 var a=salaar; b=a.substring(2,4);  document.write(b)?<hr>
+        <input type="radio" name="question6" >al<br>
+        <input type="radio" name="question6">ala<br>
+        <input type="radio" name="question6" id="correct6">la<br>
+        <input type="radio" name="question6">laa<br>
+        <button class="prev" onclick="prev(5)">PREV</button>
+        <button class="next" onclick="next(6)">NEXT</button>
+    </div>
+
+
+
+
+
+
+
+    <div class="container">
+        Q7 print(NaN===NaN)?<hr>
+        <input type="radio" name="question7" >true<br>
+        <input type="radio" name="question7" id="correct7">false<br>
+        <input type="radio" name="question7" >undefined<br>
+        <input type="radio" name="question7">Error<br>
+        <button class="prev" onclick="prev(6)">PREV</button>
+        <button class="next" onclick="next(7)">NEXT</button>
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        Q8 which function used object into a JSON string??<hr>
+        <input type="radio" name="question8" >parse()<br>
+        <input type="radio" name="question8" id="correct8">stringify()<br>
+        <input type="radio" name="question8">convert()<br>
+        <input type="radio" name="question8">number()<br>
+        <button class="prev" onclick="prev(7)">PREV</button>
+        <button class="next" onclick="next(8)">NEXT</button>
+    </div>
+
+
+
+
+
+    <div class="container">
+        Q9 which of the following are closures in javascript?<hr>
+        <input type="radio" name="question9" >variables<br>
+        <input type="radio" name="question9">function<br>
+        <input type="radio" name="question9">object<br>
+        <input type="radio" name="question9" id="correct9">all of the above<br>
+        <button class="prev" onclick="prev(8)">PREV</button>
+        <button class="next" onclick="next(9)">NEXT</button>
+    </div>
+
+
+
+    <div class="container">
+        Q10 print(typeof(NaN))?<hr>
+        <input type="radio" name="question10" >object<br>
+        <input type="radio" name="question10">string<br>
+        <input type="radio" name="question10" id="correct10">number<br>
+        <input type="radio" name="question10">Error<br>
+        <button class="prev" onclick="prev(9)">PREV</button>
+        <button onclick="result()">SUBMIT QUIZ</button>
+    </div>
+
+
+
+
+    
+    <script src="/js/quiz-final.js"></script>
+</body>
+</html>

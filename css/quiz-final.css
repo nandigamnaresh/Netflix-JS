@@ -1,0 +1,28 @@
+.container {
+    border: 3px solid white;
+    border-radius: 7px;
+    width: 25%;
+    padding: 40px 0px 40px 60px;
+    display: none;
+    background-color: rgb(80, 80, 160);
+    color: white;
+    margin: 200px 0px 0px 480px;
+    
+}
+
+button {
+    margin-top: 15px;
+    margin-left: 10px;
+    background-color: orangered;
+    color: white;
+    font-weight: 700;
+    border-color: white;
+    padding: 7px 12px 7px 12px;
+}
+button:hover{
+    background-color: red;
+    padding: 9px 14px 9px 14px;
+}
+body{
+    background-image: url("https://images.cinemaexpress.com/uploads/user/imagelibrary/2021/2/10/original/143249121_705820133449424_7741355930662727479_o.jpg");
+}

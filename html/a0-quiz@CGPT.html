@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Popup</title>
+    <style>
+        #question-container {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .options {
+            margin-top: 10px;
+            
+        }
+        #result-container ul li{
+            border: px solid black;
+            color: red;
+            list-style: none;
+        }
+        
+    </style>
+</head>
+<body>
+
+
+
+
+
+    
+<button onclick="startQuiz()">Start Quiz</button>
+
+
+<div id="question-container">
+    <h3 id="question"></h3>
+    <div id="options" class="options"></div>
+    <button onclick="previousQuestion()" id="prev-btn" style="display: none;">Previous</button>
+    <button onclick="nextQuestion()" id="next-btn">Next</button>
+    <!-- <button onclick="closeQuestion()" style="display: none;">Close</button> -->
+    <button onclick="submitQuiz()" style="display: none;" id="submit-btn">Submit Quiz</button>
+</div>
+
+<div id="result-container" style="display: none; margin-top: 70px;">
+    <h3>Quiz Result</h3>
+    <p id="quiz-result"></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var questions = [
+        { question: 'Question 1', options: ['Option 1', 'Option 2', 'Option 3'], answer: 'Option 1' },
+        { question: 'Question 2', options: ['Option A', 'Option B', 'Option C'], answer: 'Option B' },
+        { question: 'Question 3', options: ['True', 'False'], answer: 'True' },
+        // Add more questions as needed
+    ];
+
+    var currentQuestionIndex = 0;
+    var selectedAnswers = [];
+
+
+    function startQuiz() {
+        currentQuestionIndex = 0;
+        selectedAnswers = [];
+        displayQuestion();
+        document.getElementById('question-container').style.display = 'block';
+        document.querySelector('button:nth-of-type(1)').style.display = 'none';
+        document.querySelector('#prev-btn').style.display = 'none';
+        document.querySelector('#next-btn').style.display = 'block';
+        document.querySelector('#submit-btn').style.display = 'none';
+        document.getElementById('result-container').style.display = 'none';
+    }
+
+
+    function displayQuestion() 
+    {
+        var currentQuestion = questions[currentQuestionIndex];
+        document.getElementById('question').textContent = currentQuestion.question;
+
+        var optionsContainer = document.getElementById('options');
+        optionsContainer.innerHTML = ''; // Clear previous options   ///empty
+
+
+        
+        for (var i = 0; i < currentQuestion.options.length; i++) 
+        {
+            console.log(currentQuestion.options)
+
+            var optionLabel = currentQuestion.options[i];
+
+            var optionInput = document.createElement('input');
+            optionInput.type = 'radio';
+            optionInput.name = 'option';
+            optionInput.value = optionLabel;
+            optionInput.id = 'option' + i;
+
+
+
+            var optionLabelElement = document.createElement('label');
+            optionLabelElement.textContent = optionLabel;
+            optionLabelElement.setAttribute('for', 'option' + i);
+
+            
+            optionsContainer.appendChild(optionInput);
+            optionsContainer.appendChild(optionLabelElement);
+            optionsContainer.appendChild(document.createElement('br'));
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    function previousQuestion() {
+        currentQuestionIndex--;
+        displayQuestion();
+
+        if (currentQuestionIndex === 0) {
+            // Hide the Previous button on the first question
+            document.querySelector('#prev-btn').style.display = 'none';
+        }
+
+        // Always show the Next button after going back
+        document.querySelector('#next-btn').style.display = 'block';
+    }
+
+
+
+
+
+
+    function nextQuestion() {
+        var selectedOption = document.querySelector('input[name="option"]:checked');
+        
+        if (!selectedOption) {
+            alert('Please select an option.');
+            return;
+        }
+
+        selectedAnswers.push({ question: questions[currentQuestionIndex].question, answer: selectedOption.value });
+
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < questions.length) {
+            displayQuestion();
+            if (currentQuestionIndex === questions.length - 1) {
+                // Hide Next button on the last question
+                document.querySelector('#next-btn').style.display = 'none';
+                // Display Submit button on the last question
+                document.querySelector('#submit-btn').style.display = 'block';
+                document.querySelector('#prev-btn').style.display = 'block';
+            } else {
+                // Always show the Previous button except on the first question
+                document.querySelector('#prev-btn').style.display = 'block';
+            }
+        } else 
+        {
+            // All questions have been shown, display the final Submit button
+            document.querySelector('#next-btn').style.display = 'none';
+            document.querySelector('#prev-btn').style.display = 'none';
+            document.querySelector('#submit-btn').style.display = 'block';
+        }
+    }
+
+
+
+
+    // function closeQuestion() {
+    //     document.getElementById('question-container').style.display = 'none';
+    //     document.querySelector('button:nth-of-type(1)').style.display = 'block';
+    //     document.getElementById('result-container').style.display = 'none';
+    // }
+
+
+
+
+    
+    function submitQuiz() {
+        // Display selected answers
+        showResult();
+    }
+
+    function showResult() 
+    {
+        var correctCount = 0;
+        console.log(correctCount)
+        result +='<h1>'+correctCount + '</h1>';
+
+        //<ul>
+            //<li>
+          //<strong>      
+        var result = '<ul>';
+        for (var i = 0; i < questions.length; i++) {
+            result += '<li>';
+            result += '<strong>' + questions[i].question + '</strong><br>';
+            result += 'Your Answer: ' + selectedAnswers[i].answer + '<br>';
+            result += 'Correct Answer: ' + questions[i].answer;
+            result += '</li>';
+            
+
+                  
+            if (selectedAnswers[i].answer === questions[i].answer) {
+                correctCount++;
+                
+                
+            }
+            console.log(correctCount)
+            
+        }
+        
+        result += '</ul>';
+        result +='<h1>'+correctCount + '</h1>';
+        
+
+        result += '<p>Total Correct Answers: ' + correctCount + ' out of ' + questions.length + '</p>';
+
+        document.getElementById('quiz-result').innerHTML = result;
+        document.getElementById('result-container').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
+
+
+<!-- <html>
+<head>
+    <style>
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 320px;
+            z-index: 1;
+        }
+
+        .dropdown-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .dropdown-content li {
+            padding: 10px;
+            text-align: left;
+            width: 50%;
+            background-color: #000;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="dropdown">
+        <span>Dropdown</span>
+        <div class="dropdown-content">
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+            <ul>
+                <li>Item 3</li>
+                <li>Item 4</li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+</body>
+</html> -->

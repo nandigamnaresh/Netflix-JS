@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="/css/netflix1-signup.css"> -->
+
+
+    <style>
+     .header
+{
+    color: red;
+    font-size: 28px;
+    font-weight: bolder;
+    margin: 0px 0px 0px 150px;
+    
+
+}
+.content
+{
+  width: 30%;
+  height: 1200px;
+  background-color: rgb(44, 41, 41);
+  color: white;
+  padding: 30px 0px 0px 10px;
+  text-align: center;
+  margin-left: 650px;
+  margin-top: 80px;
+}
+#a{
+  padding: 30px 0px 30px 40px;
+  width: 380px;
+  font-size: 15px;
+  font-weight: 900;
+  margin-top: 30px;
+  border-radius: 10px;
+
+}
+#a5{
+    padding: 30px 0px 30px 40px;
+  width: 380px;
+  font-size: 15px;
+  font-weight: 900;
+  margin-top: 30px;
+  border-radius: 10px;
+
+}
+#a6{
+    padding: 30px 0px 30px 40px;
+  width: 380px;
+  font-size: 15px;
+  font-weight: 900;
+  margin-top: 30px;
+  border-radius: 10px;
+
+
+}
+#a1{
+  padding: 30px 0px 30px 40px;
+  width: 380px;
+  font-size: 15px;
+  font-weight: 900;
+  margin-top: 30px;
+  border-radius: 10px;
+
+}
+#b
+{
+  background-color: red;
+  color: white;
+  padding: 15px 0px 15px 1px;
+  width: 420px;
+  font-size: 25px;
+  font-weight: 900;
+  margin-top: 70px;
+  border-radius: 10px;
+}
+#b:hover
+{
+  background-color: darkblue;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+#warning
+{
+  color: red; 
+  font-size: 20px;
+}
+#warningg
+{
+  color:green; 
+  font-size: 20px;
+}
+#warning1{
+  color: red; 
+  font-size: 20px;
+}
+    </style>
+
+    
+</head>
+<body>
+    <div >
+
+
+
+
+        <div class="header">
+            <h1 class="name" style="margin-top: 100px;">WLCOME BTECH BIRYANI</h1>
+        </div>
+
+        <div class="content">
+            <h1>ORDER</h1>
+            <h2>Your item name:Single Chicken</h2>
+            <h2>amount:799/-</h2>
+
+            <div class="input">
+                <input type="email" placeholder="Full Name" id="a5" ><br>
+                <p id="name" style="color: red; font-size: 20px;"></p>
+                <p id="name1" style="color: yellow; font-size: 20px;"></p>
+
+
+                <input type="email" placeholder="Phone Number" id="a" ><br>
+                <p id="warning"></p>
+                <p id="warningg"></p>
+
+
+                <input type="email" placeholder="Email Id" id="a6" ><br>
+                <p id="mail2" style="color: yellow; font-size: 20px;"></p>
+                <input type="text" placeholder="Location" id="a1"><br>
+                <p id="warning1"></p>
+
+
+                <button type="submit" id="b" onclick=" return submit()">ORDER</button>
+               
+            
+            </div>
+        </div>
+    </div>
+    <script>
+        
+function submit()
+{
+    var name=document.getElementById('a5').value;
+    var number=document.getElementById('a').value;
+    var email=document.getElementById('a6').value;
+    var pass1=document.getElementById('a1').value;
+
+
+    if(name==null || name.length<=3)
+    {
+        document.getElementById('a5').style.border="6px solid red";
+        document.getElementById('name').innerHTML="Please enter your name";
+        return false;
+    }
+
+
+
+    if(number.length!==10)
+    {
+        document.getElementById('a').style.border="6px solid red";
+        document.getElementById('warning').innerHTML="Please enter valid  Number";
+        document.getElementById('a5').style.border="6px solid green";
+        document.getElementById('name1').innerHTML="Ok vali your name"
+        document.getElementById('name').innerHTML="";
+        return false;
+    }
+
+    if(email==null || email=="")
+    {
+        document.getElementById('a6').style.border="6px solid red";
+        document.getElementById('warning').innerHTML="";
+        document.getElementById('warningg').innerHTML="Ok Valid Number";
+        document.getElementById('a').style.border="6px solid green";
+        
+        return false;
+    }
+   
+
+    if(pass1==null || pass1=='' || pass1.length<=10)
+    {
+        document.getElementById('a1').style.border="3px solid red";
+        document.getElementById('a6').style.border="6px solid green";
+        document.getElementById('mail2').innerHTML="ok valid mail"
+        document.getElementById('warning1').innerHTML="Minimum 8 character";
+        return false;
+    }
+
+
+    alert("Your name:"+ name + "\nYour number:" + number + "\nYourmailid:" + email + "\nYourlocation" + pass1)
+
+    document.location.href="biryani-sucessful.html";
+}
+    </script>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/biryani.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+               <h1 id="main">B-TECH BIRYANI RESTURENT</h1>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-12 mt-2 pt-3 mb-5">
+                <button id="first">BIRYANI ITEMS</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+
+    <section class="section-container">
+        <div class="shop-items">
+
+
+
+            <div class="shop-item">
+                <img class="shop-item-image" src="https://b.zmtcdn.com/data/pictures/chains/2/18423512/d1d463065c1c911cc877b4e4bb4e7836.jpg" onclick="biryani1()">
+                <span class="shop-item-title">DUM BIRYANI</span>
+                <div class="shop-item-details">
+                    <span class="shop-item-price fs-2">₹170</span> <br> <br>
+                    <button class=" shop-item-button" type="button">ORDER NOW</button>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="shop-item">
+                <img class="shop-item-image" src="https://b.zmtcdn.com/data/pictures/chains/8/97578/98849381ec59cebdf436b12aeb9f0359.jpg" onclick="biryani2()">
+                <span class="shop-item-title">Single Mutton</span>
+                <div class="shop-item-details">
+                    <span class="shop-item-price fs-2">₹250</span> <br> <br>
+                    <button class=" shop-item-button" type="button">ORDER NOW</button>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="shop-item">
+                <img class="shop-item-image" src="https://b.zmtcdn.com/data/pictures/chains/8/97578/e4b62fdeb43acda302c119ed20e1699d.jpg" onclick="biryani3()">
+                <span class="shop-item-title">CHICKEN FRY</span>
+                <div class="shop-item-details">
+                    <span class="shop-item-price fs-2">₹499</span> <br><br>
+                    <button class=" shop-item-button" type="button">ORDER NOW</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="container ">
+                <div class="row">
+                    <div class="col-lg-12 mb-5 pt-5 ">
+                        <button id="middle">BURGER ITEMS</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            
+
+
+
+
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img class="shop-item-image" src="https://b.zmtcdn.com/data/pictures/chains/1/18869781/2531adb0393944562ca457b690db5c39.jpg" style="margin-left:1px;" onclick="biryani6()">
+                    <span class="shop-item-title">SPICY BURGER</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price fs-2">₹350</span> <br> <br>
+                        <button class=" shop-item-button" type="button">ORDER NOW</button>
+                    </div>
+                </div>
+    
+    
+    
+    
+    
+    
+                <div class="shop-item" style="padding-left:70px;">
+                    <img class="shop-item-image" src="https://b.zmtcdn.com/data/pictures/chains/1/18869781/0e129a4b8d8f5b450aef96517bd85f2a.jpg" onclick="biryani8()">
+                    <span class="shop-item-title">VEG BURGER</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price fs-2">₹199</span> <br> <br>
+                        <button class=" shop-item-button" type="button">ORDER NOW</button>
+                    </div>
+                </div>
+    
+    
+    
+    
+    
+                <div class="shop-item"style="margin-left: 60px;">
+                    <img class="shop-item-image" src="https://b.zmtcdn.com/data/pictures/3/19230013/673bcba873fa08e4f734e84952e5fc4a.jpg" onclick="biryani7()">
+                    <span class="shop-item-title">ROUND BURG</span>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price fs-2">₹630</span> <br><br>
+                        <button class=" shop-item-button" type="button">ORDER NOW</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            
+
+
+
+        </div>
+    </section>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="container content-section mt-5 pt-5">
+        <h2 class="section-header">YOUR ORDER ITEM</h2>
+        <div class="cart-row">
+
+            <span class="cart-item cart-header cart-column">ITEM</span>
+            <span class="cart-price cart-header cart-column">PRICE</span>
+            <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+
+
+            
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Total</strong>
+            <span class="cart-total-price">₹0</span>
+        </div>
+        
+        <button class=" btn btn-success btn-purchase" type="button">PURCHASE</button>
+    </section>
+    <script src="/js/biryani.js"></script>
+
+
+</body>
+
+</html>
